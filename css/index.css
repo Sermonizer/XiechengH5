@@ -1,7 +1,6 @@
 body {
     min-width: 320px;
     max-width: 540px;
-    height: 2000px;
     font: 400 16px/1.5 PingFangSC-regular,Tahoma,"Lucida Grande",Verdana,"Microsoft Yahei",STXihei,hei;
     overflow-x: hidden;
     -webkit-tap-highlight-color: transparent;
@@ -198,6 +197,7 @@ nav {
     border-right: 1px solid #fff;
 }
 
+/* 侧导航栏 */
 .subnav-entry {
     display: flex;
     margin: 0 4px;
@@ -205,6 +205,7 @@ nav {
     background-color: #fff;
     flex-wrap: wrap;
     padding: 5px 0;
+    box-shadow: 1px rgba(0, 0, 0, 0.2);
 }
 
 .subnav-entry li {
@@ -260,4 +261,77 @@ nav {
 }
 .subnav-entry li .subnav-entry-icon-icon10 {
     background-position: 0 -252px;
+}
+
+/* 活动模块 sale-box => sales-head => sales-body*/
+.sales-box {
+    border-top: 1px solid #bbb;
+    background-color: #fff;
+    margin: 2px 8px;
+}
+
+.sales-head {
+    position: relative;
+    height: 40px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* 隐藏h2中的字 */
+.sales-head h2 {
+    position: relative;
+    text-indent: -999px;
+    overflow: hidden;
+}
+
+.sales-head h2::after {
+    position: absolute;
+    top: 2px;
+    left: 20px;
+    content: "";
+    width: 79px;
+    height: 15px;
+    background: url(../images/un_home_text.png) no-repeat 0 -20px;
+    background-size: 79px auto;
+}
+
+.more {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    background: -webkit-linear-gradient(left, #FF506C, #FF6BC6);
+    border-radius: 15px;
+    padding: 3px 20px 3px 10px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.more::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: 9px;
+    width: 7px;
+    height: 7px;
+    /* 设置向右的小三角 利用边框旋转 */
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+}
+
+/* sales-body */
+.row {
+    display: flex;
+}
+
+.row a {
+    flex: 1;
+    border-bottom: 1px solid #eee;
+}
+
+.row a:nth-child(1) {
+    border-right: 1px solid #ccc;
+}
+
+.row a img {
+    width: 100%;
 }
