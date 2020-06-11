@@ -1,11 +1,13 @@
 body {
-    max-width: 320px;
+    min-width: 320px;
     max-width: 540px;
+    height: 2000px;
     font: 400 16px/1.5 PingFangSC-regular,Tahoma,"Lucida Grande",Verdana,"Microsoft Yahei",STXihei,hei;
     overflow-x: hidden;
     -webkit-tap-highlight-color: transparent;
     margin: 0 auto;
     background: #fafafc;
+    color: #000000;
 }
 
 ul {
@@ -138,3 +140,124 @@ div {
     background-position: 0 -160px;
 }
 
+/* nav */
+nav {
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 55px 4px 3px;
+}
+
+.nav-common {
+    display: flex;
+    height: 88px;
+    background-color: coral;
+}
+
+/* 加线性渐变色背景 若左上角到右下角：left, top 即可*/
+.nav-common:nth-child(1) {
+    background: -webkit-linear-gradient(left, #FA5A55, #FA994D);
+}
+
+.nav-common:nth-child(2) {
+    margin: 1px 0;
+    background: -webkit-linear-gradient(left, #4B90ED, #53BCED);
+}
+
+.nav-common:nth-child(3) {
+    background: -webkit-linear-gradient(left, #34C2A9, #6CD559);
+}
+
+.nav-items {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-items a {
+    flex: 1;
+    text-align: center;
+    line-height: 44px;
+    color: #fff;
+    font-size: 14px;
+    /* 文字阴影 */
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.nav-items:nth-child(n+2) a:nth-child(1) {
+    border-bottom: 1px solid #fff;
+}
+
+.nav-items:nth-child(1) a {
+    border: 0;
+    background: url(../images/grid-nav-items-hotel@v7.15.png) no-repeat bottom right;
+    background-size: 73px auto;
+}
+
+/* 因为各个框之间有白线 因此考虑给前两个加白边框(-n+x 从左往右共x个  n+x 从第x个开始) */
+.nav-items:nth-child(-n+3) {
+    border-right: 1px solid #fff;
+}
+
+.subnav-entry {
+    display: flex;
+    margin: 0 4px;
+    border-radius: 8px;
+    background-color: #fff;
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+
+.subnav-entry li {
+    /* 子盒子可以写百分比 来完成换行 */
+    flex: 20%;
+}
+
+.subnav-entry a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+}
+
+/* .subnav-entry-icon{
+    width: 28px;
+    height: 28px;
+    margin-top: 8px;
+    background: url(../images/un_ico_subnav2x@v7.152.png) no-repeat 0 0;
+    background-size: 28px auto;
+} */
+
+.subnav-entry li [class^="subnav-entry-icon"] {
+    width: 28px;
+    height: 28px;
+    margin-top: 8px;
+    background: url(../images/un_ico_subnav2x@v7.152.png) no-repeat 0 0;
+    background-size: 28px auto;
+}
+.subnav-entry li .subnav-entry-icon-icon2 {
+    background-position: 0 -28px;
+}
+.subnav-entry li .subnav-entry-icon-icon3 {
+    background-position: 0 -56px;
+}
+.subnav-entry li .subnav-entry-icon-icon4 {
+    background-position: 0 -84px;
+}
+.subnav-entry li .subnav-entry-icon-icon5 {
+    background-position: 0 -112px;
+}
+.subnav-entry li .subnav-entry-icon-icon6 {
+    background-position: 0 -140px;
+}
+.subnav-entry li .subnav-entry-icon-icon7 {
+    background-position: 0 -168px;
+}
+.subnav-entry li .subnav-entry-icon-icon8 {
+    background-position: 0 -196px;
+}
+.subnav-entry li .subnav-entry-icon-icon9 {
+    background-position: 0 -224px;
+}
+.subnav-entry li .subnav-entry-icon-icon10 {
+    background-position: 0 -252px;
+}
